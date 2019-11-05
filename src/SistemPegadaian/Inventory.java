@@ -29,7 +29,7 @@ public class Inventory {
     }
 
     void printRow() {
-        String leftAlignFormat = "| %-3s | %-15s | %-20s | %-9s | %-20s |%n";
+        String leftAlignFormat = "| %-3d | %-15s | %-20.2f | %-9s | %-20.2f |%n";
         System.out.format(leftAlignFormat, id, product, price, status, utang);
     }
 
