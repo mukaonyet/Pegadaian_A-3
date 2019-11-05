@@ -1,3 +1,4 @@
+package SistemPegadaian;
 import java.util.Scanner;
 
 public class main {
@@ -9,13 +10,16 @@ public class main {
 		
 		do {	
 			try {
-				System.out.println("MENU");
-				System.out.println("1. List Karyawan");
-				System.out.println("2. List Jadwal");
-				System.out.println("3. List Nilai");
+				System.out.format("==============================================================================%n");
+				System.out.println("||====================\t P E G A D A I A N   S Y S T E M \t============||");
+				System.out.println("||====================\t\t   KELOMPOK 3\t\t====================||");
+				System.out.format("==============================================================================%n");
+				System.out.println("1. Gadai");
+				System.out.println("2. Tebus");
+				System.out.println("3. Tampilkan Inventory");
 				System.out.println("4. Exit");
 				
-				System.out.print("Masukan pilihan : ");
+				System.out.print("Masukan pilihan menu : ");
 				pilihan = input.nextInt();
 				if (pilihan == 1) {
 					System.out.println("==================List Karyawan=================");
