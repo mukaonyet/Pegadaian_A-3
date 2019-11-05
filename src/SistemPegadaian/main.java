@@ -22,14 +22,15 @@ public class main {
 				System.out.format(" ==============================================================================%n");
 				System.out.println(" ||===============*\t P E G A D A I A N   S Y S T E M \t*============||");
 				System.out.println(" ||==================*\t\t   KELOMPOK 3\t\t*====================||");
-				System.out.format("==============================================================================%n");
+				System.out.format("===============================================================================%n");
 				System.out.println("1. Gadai");
 				System.out.println("2. Tebus");
 				System.out.println("3. Tampilkan Inventory");
 				System.out.println("4. Exit");
 				
-				System.out.print("\nMasukan pilihan menu : \n");
+				System.out.print("\nMasukan pilihan menu : ");
 				pilihan = input.nextInt();
+				System.out.println("*******************************************************************************");
 				if (pilihan == 1) {
 					menuGadai();
 				}else if (pilihan == 2) {
@@ -41,6 +42,7 @@ public class main {
 			        for (Inventory gadai1 : gadai) gadai1.printRow();
 			        Inventory.printLine();
 				}else if (pilihan == 3) {
+					System.out.println();
 					Inventory.printHeader();
 			        for (Inventory gadai1 : gadai) 
 			        	if(gadai1.getStatus().equals("gadai")){
@@ -61,9 +63,9 @@ public class main {
 	
 	public static void menuGadai(){
 		Scanner input = new Scanner(System.in);
-		System.out.println("\n\nMasukkan form dibawah ini :\n");
+		System.out.println("Masukkan form dibawah ini !\n");
 		do {
-			System.out.println("Nama :");
+			System.out.print("a. Nama : ");
 			try {
 				nama = input.nextLine();										
 			} catch (Exception e) {
@@ -74,7 +76,7 @@ public class main {
 		String kategoriisi = null;
 		do {
 			try {
-				System.out.println("Product Category :");
+				System.out.print("b. Product Category (Mohon masukkan kategori laptop, emas, atau motor : ");
 				kategori = input.next();
 				if (kategori.toLowerCase().equals("laptop")) {
 					kategoriisi = kategori;
@@ -88,18 +90,20 @@ public class main {
 			}
 		} while (kategoriisi == null);
 		
+		System.out.print("c. Deskripsi (Mohon masukkan deskripsi dengan minimal 2 kata) : ");
 		do {
-			try {
-				System.out.println("Deskripsi :");		
+			try {		
 				deskripsi = input.nextLine();
 			} catch (Exception e) {
+				
+				System.out.println("Deskripsi :");
 				input.nextLine();
 			}
 		} while (deskripsi.split(" ").length < 2);
 		
 		do {			
 			try {			
-				System.out.println("Harga :");
+				System.out.print("d. Harga (Masukkan harga minimal 10.000 dan kelipatannya) : ");
 				harga = input.nextInt();			
 			} catch (Exception e) {
 				input.nextInt();
@@ -110,11 +114,12 @@ public class main {
 		id= id+1;
 		System.out.println();
 		System.out.println("SURAT BUKTI GADAI");
-		System.out.format("========================================================%n");
+		System.out.format("================================================================================%n");
 		System.out.println("Nama\t\t\t: " + nama);
 		System.out.println("Product Category\t: " + kategori);
 		System.out.println("Deskripsi\t\t: " + deskripsi);
-		System.out.println("Harga\t\t\t: " + harga);
+		System.out.println("Harga\t\t\t: Rp." + harga+",-");
+		System.out.println();
 		
 	}
 

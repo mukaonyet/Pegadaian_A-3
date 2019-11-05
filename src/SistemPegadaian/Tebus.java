@@ -10,7 +10,7 @@ public class Tebus {
 		float bayar;
 		
 		Scanner input = new Scanner(System.in);
-		System.out.print("\n Pilih Barang yang ingin ditebus ");
+		System.out.print("\n Pilih Barang yang ingin ditebus : ");
 		pilihan = input.nextInt();
 		
 		boolean inven = false;
@@ -31,7 +31,7 @@ public class Tebus {
 			new Tebus(inventories);	
 		}	
 		
-		System.out.print("Masukkan Jumlah yg ingin anda bayar ");
+		System.out.print("Masukkan Jumlah yg ingin anda bayar : Rp.");
 		bayar = input.nextFloat();
 		tmpUtang = utang - bayar;
 		
