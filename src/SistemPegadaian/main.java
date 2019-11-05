@@ -1,5 +1,7 @@
 package SistemPegadaian;
+import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class main {
 
@@ -7,6 +9,8 @@ public class main {
 		// TODO Auto-generated method stub
 		int pilihan = 0;
 		Scanner input = new Scanner(System.in);
+
+		ArrayList<Inventory> gadai = new ArrayList<>();
 		
 		do {	
 			try {
@@ -22,11 +26,13 @@ public class main {
 				System.out.print("Masukan pilihan menu : ");
 				pilihan = input.nextInt();
 				if (pilihan == 1) {
-					System.out.println("==================List Karyawan=================");
+					// gadai
 				}else if (pilihan == 2) {
-					System.out.println("=====================List Jadwal=====================");
+					// tebus
 				}else if (pilihan == 3) {
-					System.out.println("===================List Nilai====================");
+					Inventory.printHeader();
+			        for (Inventory gadai1 : gadai) gadai1.printRow();
+			        Inventory.printLine();
 				}else if (pilihan == 4) {
 					break;
 				}else {

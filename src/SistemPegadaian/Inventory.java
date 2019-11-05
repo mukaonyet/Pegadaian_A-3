@@ -2,20 +2,22 @@ package SistemPegadaian;
 
 public class Inventory {
 	int id;
-	String product, status;
+	String nama, product, status, deskripsi;
 	float price, utang;	
 	
-	public Inventory(int id, String product, float price, String status, int utang){
+	public Inventory(int id, String nama, String product, float price, String status, String deskripsi, float utang){
 		this.id=id;
+		this.nama=nama;
 		this.product=product;
 		this.price=price;
 		this.status=status;
+		this.deskripsi=deskripsi;
 		this.utang=utang;
 			
 	}
 	
 	static void printHeader() {
-        String leftAlignFormat = "| %-3s | %-15s | %-15s | %-9s | %-15s |%n";
+        String leftAlignFormat = "| %-3s | %-15s | %-20s | %-9s | %-20s |%n";
 
         printLine();
         System.out.format(leftAlignFormat, "ID", "Product", "Price", "Status", "Utang");
@@ -23,11 +25,11 @@ public class Inventory {
     }
 
     static void printLine() {
-        System.out.format("+-----+-----------------+-----------------+-----------+-----------------+%n");
+        System.out.format("+-----+-----------------+----------------------+-----------+----------------------+%n");
     }
 
     void printRow() {
-        String leftAlignFormat = "| %-3s | %-15s | %-15s | %-9s | %-15s |%n";
+        String leftAlignFormat = "| %-3s | %-15s | %-20s | %-9s | %-20s |%n";
         System.out.format(leftAlignFormat, id, product, price, status, utang);
     }
 
