@@ -33,7 +33,13 @@ public class main {
 				if (pilihan == 1) {
 					menuGadai();
 				}else if (pilihan == 2) {
-					// tebus
+					Inventory.printHeader();
+			        for (Inventory gadai1 : gadai) gadai1.printRow();
+			        Inventory.printLine();
+					new Tebus(gadai);
+					Inventory.printHeader();
+			        for (Inventory gadai1 : gadai) gadai1.printRow();
+			        Inventory.printLine();
 				}else if (pilihan == 3) {
 					Inventory.printHeader();
 			        for (Inventory gadai1 : gadai) gadai1.printRow();
