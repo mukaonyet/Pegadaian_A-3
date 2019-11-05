@@ -16,19 +16,19 @@ public class Gadai {
 		nama = input.next();
 		System.out.println("Product Category :");
 		kategori = input.next();
-		System.out.println("Deskripsi :");
+		System.out.println("Deskripsi / Keterangan Produk:");
 		deskripsi = input.next();
 		System.out.println("Harga :");
 		harga = input.nextInt();
 		
 		System.out.println();
-		System.out.println("SURAT BUKTI GADAI");
+		System.out.println("              SURAT BUKTI GADAI");
 		System.out.format("========================================================%n");
-		System.out.println("Nama\t\t\t: " + nama);
-		System.out.println("Product Category\t: " + kategori);
-		System.out.println("Deskripsi\t\t: " + deskripsi);
-		System.out.println("Harga\t\t\t: " + harga);
-		
+		System.out.println("Nama\t\t\t       : " + nama );
+		System.out.println("Product Category\t       : " + kategori );
+		System.out.println("Deskripsi / keterangan produk  : " + deskripsi);
+		System.out.println("Harga  \t\t\t       : " + harga);
+		 
 	}
 	public static void main(String[] args) {
 		menuGadai();
