@@ -19,9 +19,9 @@ public class main {
 		
 		do {	
 			try {
-				System.out.format("\n\n\n\n\n==============================================================================%n");
-				System.out.println("||====================\t P E G A D A I A N   S Y S T E M \t============||");
-				System.out.println("||====================\t\t   KELOMPOK 3\t\t====================||");
+				System.out.format(" ==============================================================================%n");
+				System.out.println(" ||===============*\t P E G A D A I A N   S Y S T E M \t*============||");
+				System.out.println(" ||==================*\t\t   KELOMPOK 3\t\t*====================||");
 				System.out.format("==============================================================================%n");
 				System.out.println("1. Gadai");
 				System.out.println("2. Tebus");
